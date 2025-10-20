@@ -2,6 +2,8 @@
 #include <pico/stdlib.h>
 #include <FreeRTOS.h>
 #include <task.h>
+#define OUT_PIN 1
+#define DELAY_MS 1
 
 void main_task(__unused void *params)
 {
