@@ -29,13 +29,16 @@ Results for task_delay with a delay of 10 ms and a busy loop containing 2 millio
 Jitter Measurements
 ========================================================================= timer.c =========================================================================
 Without Busy loop: Drift =  .004% faster, StdDev/Jitter = 0 s
-With Busy loop: Drift =  79.167599 % slower, StdDev/Jitter = 0 s
+With Busy loop, busy loop containing 2 million instructions (for(i <1_000_000...)): Drift =  79.167599 % slower, StdDev/Jitter = 0 s
 
 ========================================================================= sleep.c =========================================================================
 Without Busy loop: Drift = .03998 % slower, StdDev/Jitter = 0 s
-With Busy loop: Drift =  82.7590 % slower, StdDev/Jitter = 19.136 us
+With Busy loop,  busy loop containing 2 million instructions (for(i <1_000_000...)): Drift =  82.7590 % slower, StdDev/Jitter = 19.136 us
 
 ======================================================================= task_delay.c =======================================================================
 Without Busy loop: Drift = .03998 % slower, StdDev/Jitter = 0 s
-With Busy loop: Drift = 82.7593 % slower, StdDev/Jitter = 0 s
+With Busy loop, busy loop containing 2 million instructions (for(i <1_000_000...)): Drift = 82.7593 % slower, StdDev/Jitter = 0 s
 
+===================================================================== gpio_interrupt.c =====================================================================
+Without Busy loop: Sync Signal to output delay = 3.2 us
+With Busy loop: Sync Signal to output delay = 483.2 us (with busy loop containing 2 million instionctions), 4.2 ms (with busy loop containing 20 million instionctions)
