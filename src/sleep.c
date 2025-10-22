@@ -14,7 +14,7 @@ int main(void)
         toggle = !toggle;
         gpio_put(OUT_PIN, toggle);
         sleep_ms(DELAY_MS);
-        for (int i = 0; i < 1000000; i++){
-        }
+        // for (int i = 0; i < 1000000; i++){
+        // }
     }
 }
